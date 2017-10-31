@@ -6,13 +6,13 @@ import java.util.concurrent.TimeUnit;
 
 import org.junit.Test;
 
-import cn.mldn.util.RedisConnectionUtil;
+import cn.mldn.util.RedisConnectionPoolUtil;
 import redis.clients.jedis.Jedis;
 
 public class TestRedisDataDemo {
 	public static Jedis jedis = null ;
 	static {
-		RedisConnectionUtil rcu = new RedisConnectionUtil() ;
+		RedisConnectionPoolUtil rcu = new RedisConnectionPoolUtil() ;
 		jedis = rcu.getConnection() ;
 	} 
 	@Test
